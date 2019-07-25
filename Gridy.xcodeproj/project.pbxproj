@@ -12,6 +12,13 @@
 		9B4108C522E1FE5C0013F042 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B4108C322E1FE5C0013F042 /* Main.storyboard */; };
 		9B4108C722E1FE5D0013F042 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B4108C622E1FE5D0013F042 /* Assets.xcassets */; };
 		9B4108CA22E1FE5D0013F042 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B4108C822E1FE5D0013F042 /* LaunchScreen.storyboard */; };
+		9B4108D222E206570013F042 /* PickButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B4108D122E206570013F042 /* PickButton.xib */; };
+		9B4108D422E2087A0013F042 /* PickButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4108D322E2087A0013F042 /* PickButton.swift */; };
+		9B4108D622E4A6330013F042 /* timeburnernormal.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9B4108D522E4A6330013F042 /* timeburnernormal.ttf */; };
+		9BB391E322E7205400342D11 /* PuzzleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB391E222E7205400342D11 /* PuzzleViewController.swift */; };
+		9BDCDDC722E5E2C30022134D /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDCDDC622E5E2C30022134D /* RoundButton.swift */; };
+		9BDCDDCD22E5E7420022134D /* EditedImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDCDDCC22E5E7420022134D /* EditedImageViewController.swift */; };
+		9BDCDDCF22E631A60022134D /* Creation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDCDDCE22E631A60022134D /* Creation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +29,13 @@
 		9B4108C622E1FE5D0013F042 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9B4108C922E1FE5D0013F042 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9B4108CB22E1FE5D0013F042 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9B4108D122E206570013F042 /* PickButton.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PickButton.xib; sourceTree = "<group>"; };
+		9B4108D322E2087A0013F042 /* PickButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickButton.swift; sourceTree = "<group>"; };
+		9B4108D522E4A6330013F042 /* timeburnernormal.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = timeburnernormal.ttf; path = Gridy/timeburnernormal.ttf; sourceTree = SOURCE_ROOT; };
+		9BB391E222E7205400342D11 /* PuzzleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PuzzleViewController.swift; sourceTree = "<group>"; };
+		9BDCDDC622E5E2C30022134D /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
+		9BDCDDCC22E5E7420022134D /* EditedImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditedImageViewController.swift; sourceTree = "<group>"; };
+		9BDCDDCE22E631A60022134D /* Creation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Creation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +68,53 @@
 		9B4108BE22E1FE5C0013F042 /* Gridy */ = {
 			isa = PBXGroup;
 			children = (
-				9B4108BF22E1FE5C0013F042 /* AppDelegate.swift */,
-				9B4108C122E1FE5C0013F042 /* ViewController.swift */,
+				9BCAE13722E4AC1600780D72 /* Model */,
+				9BCAE13822E4AC2600780D72 /* View */,
+				9BCAE13922E4AC3400780D72 /* Controller */,
+				9BCAE13A22E4AC5400780D72 /* Supporting Files */,
+				9B4108D322E2087A0013F042 /* PickButton.swift */,
+				9BDCDDC622E5E2C30022134D /* RoundButton.swift */,
+			);
+			path = Gridy;
+			sourceTree = "<group>";
+		};
+		9BCAE13722E4AC1600780D72 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9BDCDDCE22E631A60022134D /* Creation.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9BCAE13822E4AC2600780D72 /* View */ = {
+			isa = PBXGroup;
+			children = (
 				9B4108C322E1FE5C0013F042 /* Main.storyboard */,
+				9B4108D122E206570013F042 /* PickButton.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9BCAE13922E4AC3400780D72 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				9B4108C122E1FE5C0013F042 /* ViewController.swift */,
+				9BDCDDCC22E5E7420022134D /* EditedImageViewController.swift */,
+				9BB391E222E7205400342D11 /* PuzzleViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		9BCAE13A22E4AC5400780D72 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9B4108D522E4A6330013F042 /* timeburnernormal.ttf */,
+				9B4108BF22E1FE5C0013F042 /* AppDelegate.swift */,
 				9B4108C622E1FE5D0013F042 /* Assets.xcassets */,
 				9B4108C822E1FE5D0013F042 /* LaunchScreen.storyboard */,
 				9B4108CB22E1FE5D0013F042 /* Info.plist */,
 			);
-			path = Gridy;
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -123,7 +176,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				9B4108CA22E1FE5D0013F042 /* LaunchScreen.storyboard in Resources */,
+				9B4108D622E4A6330013F042 /* timeburnernormal.ttf in Resources */,
 				9B4108C722E1FE5D0013F042 /* Assets.xcassets in Resources */,
+				9B4108D222E206570013F042 /* PickButton.xib in Resources */,
 				9B4108C522E1FE5C0013F042 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -135,8 +190,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9BDCDDC722E5E2C30022134D /* RoundButton.swift in Sources */,
+				9BDCDDCD22E5E7420022134D /* EditedImageViewController.swift in Sources */,
+				9BB391E322E7205400342D11 /* PuzzleViewController.swift in Sources */,
 				9B4108C222E1FE5C0013F042 /* ViewController.swift in Sources */,
+				9B4108D422E2087A0013F042 /* PickButton.swift in Sources */,
 				9B4108C022E1FE5C0013F042 /* AppDelegate.swift in Sources */,
+				9BDCDDCF22E631A60022134D /* Creation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,6 +343,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = THLK67U83W;
 				INFOPLIST_FILE = Gridy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -300,6 +361,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = THLK67U83W;
 				INFOPLIST_FILE = Gridy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
