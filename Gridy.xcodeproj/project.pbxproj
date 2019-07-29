@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9B28C21A22ECB4E100145930 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B28C21922ECB4E100145930 /* CollectionViewCell.swift */; };
 		9B4108C022E1FE5C0013F042 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4108BF22E1FE5C0013F042 /* AppDelegate.swift */; };
 		9B4108C222E1FE5C0013F042 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4108C122E1FE5C0013F042 /* ViewController.swift */; };
 		9B4108C522E1FE5C0013F042 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B4108C322E1FE5C0013F042 /* Main.storyboard */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9B28C21922ECB4E100145930 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		9B4108BC22E1FE5C0013F042 /* Gridy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gridy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B4108BF22E1FE5C0013F042 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9B4108C122E1FE5C0013F042 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -74,6 +76,7 @@
 				9BCAE13A22E4AC5400780D72 /* Supporting Files */,
 				9B4108D322E2087A0013F042 /* PickButton.swift */,
 				9BDCDDC622E5E2C30022134D /* RoundButton.swift */,
+				9B28C21922ECB4E100145930 /* CollectionViewCell.swift */,
 			);
 			path = Gridy;
 			sourceTree = "<group>";
@@ -192,6 +195,7 @@
 			files = (
 				9BDCDDC722E5E2C30022134D /* RoundButton.swift in Sources */,
 				9BDCDDCD22E5E7420022134D /* EditedImageViewController.swift in Sources */,
+				9B28C21A22ECB4E100145930 /* CollectionViewCell.swift in Sources */,
 				9BB391E322E7205400342D11 /* PuzzleViewController.swift in Sources */,
 				9B4108C222E1FE5C0013F042 /* ViewController.swift in Sources */,
 				9B4108D422E2087A0013F042 /* PickButton.swift in Sources */,

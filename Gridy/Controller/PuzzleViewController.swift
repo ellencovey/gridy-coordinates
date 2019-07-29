@@ -8,35 +8,22 @@
 
 import UIKit
 
-class PuzzleViewController: UIViewController {
+class PuzzleViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     
-    @IBOutlet weak var myImage: UIImageView!
-    @IBOutlet weak var splitButton: UIButton!
+    @IBOutlet weak var collectionView: UICollectionView!
     
-    @IBAction func splitImage(_ sender: Any) {
-        sliceImage()
-    }
-    
-    // placeholder image for screenshot
-    var editedImage = UIImage(named: "pic-ben")
-    
-    func sliceImage() {
-        splitImage(row: 3, column: 3)
-        createNewImage(imgArr: tileArr.shuffled())
-    }
-    
+    var editedImage = UIImage(named: "pic-ben") // placeholder image for screenshot from last view
     var tileArr = [[UIImage]]() // will contain small pieces of image
+    lazy var tileImages = tileArr.reduce([], +) // this will pass to collection view
     
+    // to do - split into single dictionary Int & UIImage, not array of arrays
     func splitImage(row : Int , column : Int) {
         
-        let originalImg = myImage.image
+        let originalImg = editedImage
         
-        let tileHeight =  (myImage.image?.size.height)! / CGFloat (row)
-        let tileWidth =  (myImage.image?.size.width)! / CGFloat (column)
-        
-        let scale = (myImage.image?.scale)! //scale conversion factor is needed as UIImage make use of "points" whereas CGImage use pixels.
-        
-        
+        let tileHeight = (editedImage?.size.height)! / CGFloat (row)
+        let tileWidth = (editedImage?.size.width)! / CGFloat (column)
+        let scale = (editedImage?.scale)!
         
         for y in 0 ..< row {
             var yArr = [UIImage]()
@@ -56,40 +43,25 @@ class PuzzleViewController: UIViewController {
         
     }
     
-    func createNewImage(imgArr: [[UIImage]]){
-        
-        let row = imgArr.count
-        let column = imgArr[0].count
-        let height =  (myImage.frame.size.height) /  CGFloat (row )
-        let width =  (myImage.frame.size.width) / CGFloat (column )
-        
-        
-        UIGraphicsBeginImageContext(CGSize.init(width: myImage.frame.size.width , height: myImage.frame.size.height))
-        
-        for y in 0..<row{
-            
-            for x in 0..<column{
-                
-                let newImage = imgArr[y][x]
-                
-                newImage.draw(in: CGRect.init(x: CGFloat(x) * width, y:  CGFloat(y) * height  , width: width - 1  , height: height - 1 ))
-                
-            }
-        }
-        
-        let originalImg = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext();
-        myImage.image = originalImg
-    }
-    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        myImage.image = editedImage
     }
         
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        splitImage(row: 3, column: 3)
+    }
+    
+    // configuring collection view
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return tileImages.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! CollectionViewCell
+        cell.tileImageView.image = tileImages[indexPath.item]
+        return cell
     }
     
     
