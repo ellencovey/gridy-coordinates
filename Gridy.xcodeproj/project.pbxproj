@@ -16,6 +16,7 @@
 		9B4108D222E206570013F042 /* PickButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B4108D122E206570013F042 /* PickButton.xib */; };
 		9B4108D422E2087A0013F042 /* PickButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4108D322E2087A0013F042 /* PickButton.swift */; };
 		9B4108D622E4A6330013F042 /* timeburnernormal.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9B4108D522E4A6330013F042 /* timeburnernormal.ttf */; };
+		9B86DBCB22F1857A00D9205D /* UIImage+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B86DBCA22F1857A00D9205D /* UIImage+extensions.swift */; };
 		9BB391E322E7205400342D11 /* PuzzleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB391E222E7205400342D11 /* PuzzleViewController.swift */; };
 		9BDCDDC722E5E2C30022134D /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDCDDC622E5E2C30022134D /* RoundButton.swift */; };
 		9BDCDDCD22E5E7420022134D /* EditedImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDCDDCC22E5E7420022134D /* EditedImageViewController.swift */; };
@@ -34,6 +35,7 @@
 		9B4108D122E206570013F042 /* PickButton.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PickButton.xib; sourceTree = "<group>"; };
 		9B4108D322E2087A0013F042 /* PickButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickButton.swift; sourceTree = "<group>"; };
 		9B4108D522E4A6330013F042 /* timeburnernormal.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = timeburnernormal.ttf; path = Gridy/timeburnernormal.ttf; sourceTree = SOURCE_ROOT; };
+		9B86DBCA22F1857A00D9205D /* UIImage+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+extensions.swift"; sourceTree = "<group>"; };
 		9BB391E222E7205400342D11 /* PuzzleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PuzzleViewController.swift; sourceTree = "<group>"; };
 		9BDCDDC622E5E2C30022134D /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 		9BDCDDCC22E5E7420022134D /* EditedImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditedImageViewController.swift; sourceTree = "<group>"; };
@@ -70,6 +72,7 @@
 		9B4108BE22E1FE5C0013F042 /* Gridy */ = {
 			isa = PBXGroup;
 			children = (
+				9B86DBC922F1856600D9205D /* Extensions */,
 				9BCAE13722E4AC1600780D72 /* Model */,
 				9BCAE13822E4AC2600780D72 /* View */,
 				9BCAE13922E4AC3400780D72 /* Controller */,
@@ -79,6 +82,14 @@
 				9B28C21922ECB4E100145930 /* CollectionViewCell.swift */,
 			);
 			path = Gridy;
+			sourceTree = "<group>";
+		};
+		9B86DBC922F1856600D9205D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				9B86DBCA22F1857A00D9205D /* UIImage+extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		9BCAE13722E4AC1600780D72 /* Model */ = {
@@ -195,6 +206,7 @@
 			files = (
 				9BDCDDC722E5E2C30022134D /* RoundButton.swift in Sources */,
 				9BDCDDCD22E5E7420022134D /* EditedImageViewController.swift in Sources */,
+				9B86DBCB22F1857A00D9205D /* UIImage+extensions.swift in Sources */,
 				9B28C21A22ECB4E100145930 /* CollectionViewCell.swift in Sources */,
 				9BB391E322E7205400342D11 /* PuzzleViewController.swift in Sources */,
 				9B4108C222E1FE5C0013F042 /* ViewController.swift in Sources */,
