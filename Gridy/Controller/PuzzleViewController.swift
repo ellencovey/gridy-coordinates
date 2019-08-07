@@ -8,16 +8,18 @@
 
 import UIKit
 
-class PuzzleViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+class PuzzleViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UIGestureRecognizerDelegate {
     
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var targetBox: UIView!
     
-    public var editedImage: UIImage? // placeholder image for screenshot from last view
+    public var editedImage: UIImage? // for screenshot from last view
+    let gridSize = 3
     
     // making dictionary by splitting image
     func getDict() -> [Int: UIImage]? {
         if let editedImage = editedImage {
-            return editedImage.splitImage(3)
+            return editedImage.splitImage(gridSize)
         }
         return nil
     }
@@ -32,8 +34,7 @@ class PuzzleViewController: UIViewController, UICollectionViewDataSource, UIColl
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
-        for (number, tile) in tileDict! {
+        for (number, _) in tileDict! {
             print("Tile number \(number)")
         }
         

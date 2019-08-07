@@ -77,9 +77,6 @@
 				9BCAE13822E4AC2600780D72 /* View */,
 				9BCAE13922E4AC3400780D72 /* Controller */,
 				9BCAE13A22E4AC5400780D72 /* Supporting Files */,
-				9B4108D322E2087A0013F042 /* PickButton.swift */,
-				9BDCDDC622E5E2C30022134D /* RoundButton.swift */,
-				9B28C21922ECB4E100145930 /* CollectionViewCell.swift */,
 			);
 			path = Gridy;
 			sourceTree = "<group>";
@@ -96,6 +93,9 @@
 			isa = PBXGroup;
 			children = (
 				9BDCDDCE22E631A60022134D /* Creation.swift */,
+				9B4108D322E2087A0013F042 /* PickButton.swift */,
+				9BDCDDC622E5E2C30022134D /* RoundButton.swift */,
+				9B28C21922ECB4E100145930 /* CollectionViewCell.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
