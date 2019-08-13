@@ -12,19 +12,32 @@ class PuzzleViewController: UIViewController, UICollectionViewDataSource, UIColl
     
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var targetBox: UIView!
+    @IBOutlet weak var coverSpace: UIView!
     
     public var editedImage: UIImage? // for screenshot from last view
     let gridSize = 3
     
-    // making dictionary by splitting image
-    func getDict() -> [Int: UIImage]? {
-        if let editedImage = editedImage {
-            return editedImage.splitImage(gridSize)
-        }
-        return nil
+    // holds top left point of any moved tile
+    var coordinates: CGPoint?
+    var dropPoint: CGPoint?
+    var tileDict: [Int:UIImage]? = [:]
+    
+    func getDropPoint() {
+        // let cvPoint = collectionView.frame.origin  // error - this can unwrap to nil, find way to initialise properly
+        let point = CGPoint(x: coordinates!.x + 16, y: coordinates!.y + 90) // numbers are temporary
+        dropPoint = point
+        print("The drop point is \(dropPoint!)")
     }
-
-    lazy var tileDict = getDict()
+    
+    func printLocation() {
+        print(coordinates!)
+    }
+    
+    func printPoints() {
+        print("The blue view is at \(coverSpace.frame.origin)")
+        print("The collection view is at \(collectionView.frame.origin)")
+        print("The target box is at \(targetBox.frame.origin)")
+    }
     
     
     override func viewWillAppear(_ animated: Bool) {
@@ -34,9 +47,23 @@ class PuzzleViewController: UIViewController, UICollectionViewDataSource, UIColl
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        for (number, _) in tileDict! {
-            print("Tile number \(number)")
+        
+        // making dictionary by splitting image
+        
+        printPoints()
+        
+        func getDict() -> [Int: UIImage]? {
+            if let editedImage = editedImage {
+                return editedImage.splitImage(gridSize)
+            }
+            return [:]
         }
+        
+        tileDict = getDict()
+        
+//        for (number, _) in tileDict! {
+//            print("Tile number \(number)")
+//        }
         
     }
     
@@ -55,6 +82,15 @@ class PuzzleViewController: UIViewController, UICollectionViewDataSource, UIColl
     
 }
 
+// print values in viewcontroller, check centre info is passing correctly
+
+// when dropping - print boundaries of 2nd collection view
+// write comparisons in viewcontroller, get info from class with delegates/delegate pattern
+// use for loop to compare centres, stop if true & assign
+// have isEmpty property, set to false once tile is correctly dropped there
+// also try UIView divided mathematically into pieces & calculate centres
+// tiles could be in table view
+// if position correct, assign tile as content of cell in 2nd collection view
 
 // for every cell in 2nd collection view, cell.frame.contains (returns boolean) - check if location matches dragged cell (can get location from drag gesture) then check order & see if number matches (also dont allow if not within grid view at all)
 // match piece centre with cell centre if correct

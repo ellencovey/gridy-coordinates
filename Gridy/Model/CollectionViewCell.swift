@@ -12,8 +12,10 @@ class CollectionViewCell: UICollectionViewCell, UIGestureRecognizerDelegate {
     
     @IBOutlet weak var tileImageView: UIImageView!
     
+    let vc = PuzzleViewController()
     var initialImageViewOffset = CGPoint()
 
+    // assigning pan gesture to drag tiles
     override func awakeFromNib() {
         let panGesture = UIPanGestureRecognizer(target: self, action: #selector(moveImage(_:)))
         panGesture.delegate = self
@@ -54,23 +56,32 @@ class CollectionViewCell: UICollectionViewCell, UIGestureRecognizerDelegate {
 //        //        }
 //    }
     
-
+    // called when dragging tile from first collection view
     @objc func moveImage(_ sender: UIPanGestureRecognizer) -> CGPoint {
-        sender.view?.superview?.bringSubviewToFront(sender.view!)
-        let translation = sender.translation(in: sender.view?.superview)
+        
+        let chosenTile = sender.view
+        let space = chosenTile?.superview
+        
+        // bring cell to top of everything else
+        self.superview?.bringSubviewToFront(self)
+        
+        // the x and y position relative to where tile started
+        let translation = sender.translation(in: space)
         
         if sender.state == .began {
-            initialImageViewOffset = (sender.view?.frame.origin)!
+            initialImageViewOffset = (chosenTile?.frame.origin)!
+            // initialImageViewOffset = (chosenTile?.convert(frame.origin, to: chosenTile?.superview))! // position in superview
         }
         
-        let position = CGPoint(x: translation.x + initialImageViewOffset.x - (sender.view?.frame.origin.x)!, y: translation.y + initialImageViewOffset.y - (sender.view?.frame.origin.y)!)
-        let positionInSuperView = sender.view?.convert(position, to: sender.view?.superview)
-        sender.view?.transform = (sender.view?.transform.translatedBy(x: position.x, y: position.y))!
+        let position = CGPoint(x: translation.x + initialImageViewOffset.x - (chosenTile?.frame.origin.x)!, y: translation.y + initialImageViewOffset.y - (chosenTile?.frame.origin.y)!)
+        let positionInSuperView = (chosenTile?.convert(frame.origin, to: space))
+        chosenTile?.transform = (chosenTile?.transform.translatedBy(x: position.x, y: position.y))!
         
         if sender.state == .ended {
-            print(positionInSuperView)
-            sender.view?.frame.origin = initialImageViewOffset // if placement is wrong
-            
+            chosenTile?.frame.origin = initialImageViewOffset
+            vc.coordinates = positionInSuperView
+            vc.printLocation()
+            vc.getDropPoint()
         }
         
         return positionInSuperView!

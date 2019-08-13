@@ -235,49 +235,56 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="WIT-fl-g9d">
-                                <rect key="frame" x="16" y="84" width="343" height="128"/>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DUg-U8-XgP">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Hcl-sn-pec">
-                                    <size key="itemSize" width="60" height="60"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="AYB-ry-CnP" customClass="CollectionViewCell" customModule="Gridy" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RQx-nv-odi">
+                                        <rect key="frame" x="50" y="314" width="275" height="200"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xlN-iH-CPL">
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                    <collectionView multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="WIT-fl-g9d">
+                                        <rect key="frame" x="16" y="90" width="343" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.92247492070000003" green="0.77921730280000001" blue="0.26256883139999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Hcl-sn-pec">
+                                            <size key="itemSize" width="60" height="60"/>
+                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        </collectionViewFlowLayout>
+                                        <cells>
+                                            <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="AYB-ry-CnP" customClass="CollectionViewCell" customModule="Gridy" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                                     <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
-                                                </imageView>
-                                            </subviews>
-                                        </view>
-                                        <constraints>
-                                            <constraint firstAttribute="bottom" secondItem="xlN-iH-CPL" secondAttribute="bottom" id="9ID-Ow-hP1"/>
-                                            <constraint firstAttribute="trailing" secondItem="xlN-iH-CPL" secondAttribute="trailing" id="ST6-4B-un5"/>
-                                            <constraint firstItem="xlN-iH-CPL" firstAttribute="leading" secondItem="AYB-ry-CnP" secondAttribute="leading" id="dWe-Nx-r0D"/>
-                                            <constraint firstItem="xlN-iH-CPL" firstAttribute="top" secondItem="AYB-ry-CnP" secondAttribute="top" id="qnz-7u-5Le"/>
-                                        </constraints>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xlN-iH-CPL">
+                                                            <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                                                        </imageView>
+                                                    </subviews>
+                                                </view>
+                                                <constraints>
+                                                    <constraint firstAttribute="bottom" secondItem="xlN-iH-CPL" secondAttribute="bottom" id="9ID-Ow-hP1"/>
+                                                    <constraint firstAttribute="trailing" secondItem="xlN-iH-CPL" secondAttribute="trailing" id="ST6-4B-un5"/>
+                                                    <constraint firstItem="xlN-iH-CPL" firstAttribute="leading" secondItem="AYB-ry-CnP" secondAttribute="leading" id="dWe-Nx-r0D"/>
+                                                    <constraint firstItem="xlN-iH-CPL" firstAttribute="top" secondItem="AYB-ry-CnP" secondAttribute="top" id="qnz-7u-5Le"/>
+                                                </constraints>
+                                                <connections>
+                                                    <outlet property="tileImageView" destination="xlN-iH-CPL" id="iUB-Lj-vX4"/>
+                                                </connections>
+                                            </collectionViewCell>
+                                        </cells>
                                         <connections>
-                                            <outlet property="tileImageView" destination="xlN-iH-CPL" id="iUB-Lj-vX4"/>
+                                            <outlet property="dataSource" destination="iJd-Y6-Qcn" id="eey-vo-bno"/>
+                                            <outlet property="delegate" destination="iJd-Y6-Qcn" id="kyF-F8-bvj"/>
                                         </connections>
-                                    </collectionViewCell>
-                                </cells>
-                                <connections>
-                                    <outlet property="dataSource" destination="iJd-Y6-Qcn" id="eey-vo-bno"/>
-                                    <outlet property="delegate" destination="iJd-Y6-Qcn" id="kyF-F8-bvj"/>
-                                </connections>
-                            </collectionView>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RQx-nv-odi">
-                                <rect key="frame" x="67" y="406" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </collectionView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.63720900830000005" green="0.78397418460000001" blue="0.96620899439999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -285,6 +292,7 @@
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="WIT-fl-g9d" id="LBp-k6-Ycz"/>
+                        <outlet property="coverSpace" destination="DUg-U8-XgP" id="CBl-bl-FQp"/>
                         <outlet property="targetBox" destination="RQx-nv-odi" id="7Ul-E2-6Ep"/>
                     </connections>
                 </viewController>
