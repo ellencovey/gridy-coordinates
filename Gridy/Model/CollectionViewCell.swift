@@ -80,8 +80,11 @@ class CollectionViewCell: UICollectionViewCell, UIGestureRecognizerDelegate {
         if sender.state == .ended {
             chosenTile?.frame.origin = initialImageViewOffset
             vc.coordinates = positionInSuperView
+            vc.draggedTile = chosenTile
             vc.printLocation()
             vc.getDropPoint()
+            vc.getTileCenter()
+            vc.compareLocations()
         }
         
         return positionInSuperView!

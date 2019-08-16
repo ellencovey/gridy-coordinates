@@ -18,6 +18,7 @@
 		9B4108D622E4A6330013F042 /* timeburnernormal.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9B4108D522E4A6330013F042 /* timeburnernormal.ttf */; };
 		9B86DBCB22F1857A00D9205D /* UIImage+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B86DBCA22F1857A00D9205D /* UIImage+extensions.swift */; };
 		9BB391E322E7205400342D11 /* PuzzleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB391E222E7205400342D11 /* PuzzleViewController.swift */; };
+		9BCE6FDA230313D1001078DC /* CollectionViewCellDrop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BCE6FD9230313D1001078DC /* CollectionViewCellDrop.swift */; };
 		9BDCDDC722E5E2C30022134D /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDCDDC622E5E2C30022134D /* RoundButton.swift */; };
 		9BDCDDCD22E5E7420022134D /* EditedImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDCDDCC22E5E7420022134D /* EditedImageViewController.swift */; };
 		9BDCDDCF22E631A60022134D /* Creation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDCDDCE22E631A60022134D /* Creation.swift */; };
@@ -37,6 +38,7 @@
 		9B4108D522E4A6330013F042 /* timeburnernormal.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = timeburnernormal.ttf; path = Gridy/timeburnernormal.ttf; sourceTree = SOURCE_ROOT; };
 		9B86DBCA22F1857A00D9205D /* UIImage+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+extensions.swift"; sourceTree = "<group>"; };
 		9BB391E222E7205400342D11 /* PuzzleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PuzzleViewController.swift; sourceTree = "<group>"; };
+		9BCE6FD9230313D1001078DC /* CollectionViewCellDrop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCellDrop.swift; sourceTree = "<group>"; };
 		9BDCDDC622E5E2C30022134D /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 		9BDCDDCC22E5E7420022134D /* EditedImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditedImageViewController.swift; sourceTree = "<group>"; };
 		9BDCDDCE22E631A60022134D /* Creation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Creation.swift; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 				9B4108D322E2087A0013F042 /* PickButton.swift */,
 				9BDCDDC622E5E2C30022134D /* RoundButton.swift */,
 				9B28C21922ECB4E100145930 /* CollectionViewCell.swift */,
+				9BCE6FD9230313D1001078DC /* CollectionViewCellDrop.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -213,6 +216,7 @@
 				9B4108D422E2087A0013F042 /* PickButton.swift in Sources */,
 				9B4108C022E1FE5C0013F042 /* AppDelegate.swift in Sources */,
 				9BDCDDCF22E631A60022134D /* Creation.swift in Sources */,
+				9BCE6FDA230313D1001078DC /* CollectionViewCellDrop.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
